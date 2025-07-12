@@ -1,174 +1,139 @@
-*{
-    margin: 0px;
-    font-family: "inter";
+/* Reset Básico e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-#menusuperior{
+body {
+    background-color: #F9F9F9; /* Fundo cinza claro como no Figma */
+}
+
+/* HEADER - Seção Superior */
+header {
     background-color: #303030;
-    margin: 0px;
-    width: 1440px;
-    height: 475px;
-    padding-top: 1px;
-    padding-right: 99px;
-
-}
-#titulo-cabeçalho{
     color: #FFFFFF;
-    width: 1024px;
-    height: 72px;
-    margin-top: 206px;
-    margin-left: 62px;
-    gap: 0px;
-    opacity: 0px;    
-    font-family: Inter;
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 72px;
-    letter-spacing: -0.025em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-}
-
-#texto-cabeçalho{
-    color: #FFFFFF;
-    margin-top: 28px;
-    margin-left: 62px;
-    width: 1024px;
-    height: 28px;
-    gap: 0px;
-    opacity: 0px;
-    font-family: Inter;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 28px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-}
-
-#menuinformacional{
-    background-color:#F9F9F9;
-    color: #000000;
-    display: grid;
-    grid-auto-flow: column;
-    columns: auto;
-    margin-top: 54px;
-    margin-left: 100px;
-    margin-bottom: 66px;
-    display: grid;
-    grid-auto-flow: column;
-    columns: center;
-}
-
-.informacaonumero{
-    font-family: Inter;
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 28px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-}
-
-.informacaotexto{
-    font-family: Inter;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 28px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-}
-
-#secaoimg{
-    display: grid;
-    grid-auto-flow: column;
-    columns: auto;
-}
-
-#tituloimg{
-    color: #000000;
-    margin-bottom: 50px;
-    font-family: Inter;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 20px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-}
-
-#textoimg{
-    color: #000000;
-    font-family: Inter;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 30px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-}
-
-#imagen{
-    margin: 50px 50px;
-}
-
-#paragrafoimg{
-    margin: 300px 77px;
-}
-
-#formulario{
+    padding: 200px 0;
     text-align: center;
+}
+
+header h1 {
+    font-size: 60px;
+    font-weight: 600; /* SemiBold */
+}
+
+header p {
+    font-size: 20px;
+    font-weight: 500; /* Medium */
+    margin-top: 20px;
+}
+
+/* MAIN - Conteúdo Principal */
+main {
+    max-width: 1024px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo na página */
+    padding: 50px 20px; /* Espaçamento interno */
+}
+
+/* Seção de Números */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: 600; /* SemiBold */
+    color: #000000;
+}
+
+.stat-text {
+    font-size: 20px;
+    font-weight: 400; /* Regular */
+    color: #000000;
+}
+
+/* Seção de História e Imagem */
+.history {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Espaço entre texto e imagem */
+    margin-bottom: 100px;
+}
+
+.history-content h2 {
+    font-size: 40px;
+    font-weight: 500; /* Medium */
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.history-content p {
+    font-size: 24px;
+    font-weight: 300; /* Light */
+    line-height: 1.5;
+    color: #000000;
+}
+
+.history img {
+    max-width: 510px;
+}
+
+/* Seção do Formulário */
+.form-section {
     background-color: #303030;
-    width: 1440px;
-    height: 638px;
-    top: 1478px;
-    gap: 0px;
-    opacity: 0px;
-    padding-top: 48px;
-    padding-right: 99px;
-}
-
-#tituloformulario{
     color: #FFFFFF;
-    margin-top: 87px;
-
+    text-align: center;
+    padding: 80px;
+    border-radius: 10px;
 }
 
-input{
+.form-section h2 {
+    font-size: 32px;
+    font-weight: 700; /* Bold */
+    margin-bottom: 40px;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espaço entre os inputs e botão */
+}
+
+.form-section input {
     width: 460px;
-    height: 52px;
+    height: 72px;
     background-color: #FFFFFF;
-    color: #0000004D;
-    margin: 32px;
-    border: 0px;
+    border: none;
     border-radius: 10px;
     padding-left: 30px;
+    font-size: 20px;
 }
 
-button{
-    background-color: #C07212;
-    color: #FFFFFF;
+.form-section input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.form-section button {
     width: 286px;
-    height: 54px;
-    margin-top: 80px;
-    left: 577px;
-    gap: 0px;
-    border: 0px;
+    height: 74px;
+    background-color: #C07212; /* Cor correta do Figma */
+    color: #FFFFFF;
+    border: none;
     border-radius: 10px;
-    opacity: 0px;
-    font-weight: 700;
     font-size: 30px;
+    font-weight: 700; /* Bold */
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-button:hover{
+.form-section button:hover {
     background-color: #ff8c00;
-    color: white;
-    transform: translateY(-7px);
-    box-shadow: 0px 15px 20px #5e3d14;
-    transition-duration: 0.5s;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
